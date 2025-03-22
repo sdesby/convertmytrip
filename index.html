@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-95RER92QSF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-95RER92QSF');
+    </script>
+    
+    <!-- Others -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvertMyTrip - Travel Unit Converter | US to Metric Conversion for Travelers</title>
+    <meta name="description" content="Free travel unit converter for international travelers. Convert between US and metric measurements for weight, temperature, distance, shoe sizes, and more. Perfect companion for your USA trip!">
+    <meta name="keywords" content="travel unit converter, US metric converter, travel measurements, metric to imperial, USA measurements, international travel converter">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="ConvertMyTrip - Travel Unit Converter">
+    <meta property="og:description" content="Convert between US and metric units while traveling. Your perfect companion for understanding American measurements!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://convertmytrip.com">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://convertmytrip.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ConvertMyTrip",
+        "description": "Travel unit converter for international travelers visiting the USA. Convert between metric and US measurements instantly.",
+        "applicationCategory": "Travel Application",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "US to Metric conversion",
+            "Temperature conversion",
+            "Distance conversion",
+            "Weight conversion",
+            "Shoe size conversion",
+            "Volume conversion",
+            "Multilingual support"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="language-toggle">
+            <button class="lang-btn" data-lang="en">
+                <img src="https://flagcdn.com/w20/us.png" alt="USA flag" width="20"> EN
+            </button>
+            <button class="lang-btn" data-lang="es">
+                <img src="https://flagcdn.com/w20/es.png" alt="Spanish flag" width="20"> ES
+            </button>
+            <button class="lang-btn active" data-lang="fr">
+                <img src="https://flagcdn.com/w20/fr.png" alt="French flag" width="20"> FR
+            </button>
+            <button class="lang-btn" data-lang="de">
+                <img src="https://flagcdn.com/w20/de.png" alt="German flag" width="20"> DE
+            </button>
+        </div>
+
+        <header>
+            <img src="img/favicon.png" alt="ConvertMyTrip logo" class="logo">
+            <h1 data-i18n="title">ConvertMyTrip</h1>
+            <p class="subtitle" data-i18n="subtitle">Your friendly metric conversion companion</p>
+            <p class="travel-context" data-i18n="travelContext">Perfect for travelers visiting the United States! Instantly convert any measurement you encounter.</p>
+        </header>
+
+        <main>
+            <div class="content-wrapper" style="display: flex; flex-direction: row;">
+                <section class="messages-section">
+                    <h2 data-i18n="messages.title">Messages for Visitors</h2>
+                    <div class="messages-container">
+                        <div class="message">
+                            <h3 data-i18n="messages.welcome.title">Welcome!</h3>
+                            <p data-i18n-html="messages.welcome.text">Thank you for using ConvertMyTrip. We're here to make your travel conversions easy!</p>
+                        </div>
+                        <div class="message">
+                            <h3 data-i18n="messages.update.title">Latest Updates</h3>
+                            <p data-i18n-html="messages.update.text">We've added new conversion categories and improved accuracy for all calculations.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="main-content">
+                    <div class="conversion-card">
+                        <div class="category-selector">
+                            <select id="categorySelect" aria-label="Select conversion category">
+                                <option value="weight" data-i18n="categories.weight">Weight</option>
+                                <option value="length" data-i18n="categories.length">Length</option>
+                                <option value="speed" data-i18n="categories.speed">Speed</option>
+                                <option value="temperature" data-i18n="categories.temperature">Temperature</option>
+                                <option value="volume" data-i18n="categories.volume">Volume</option>
+                                <option value="shoeSize" data-i18n="categories.shoeSize">Shoe Size</option>
+                                <option value="cooking" data-i18n="categories.cooking">Cooking</option>
+                                <option value="surface" data-i18n="categories.surface">Surface Area</option>
+                            </select>
+                        </div>
+
+                        <div class="conversion-inputs">
+                            <div class="input-group">
+                                <input type="number" id="leftInput" data-i18n-placeholder="enterValue" aria-label="Enter value to convert from">
+                                <select id="leftUnit" aria-label="Select unit to convert from"></select>
+                            </div>
+                            
+                            <button id="swapButton" class="swap-button" aria-label="Swap conversion direction">⇄</button>
+
+                            <div class="input-group">
+                                <input type="number" id="rightInput" data-i18n-placeholder="enterValue" aria-label="Enter value to convert to">
+                                <select id="rightUnit" aria-label="Select unit to convert to"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="common-conversions">
+                        <h2 data-i18n="commonConversions">Common Conversions</h2>
+                        <div id="commonConversions" class="conversion-grid"></div>
+                    </div>
+
+                    <section class="travel-tips">
+                        <h2 data-i18n="travelTips.title">Essential Travel Conversion Tips</h2>
+                        <div class="tips-grid">
+                            <div class="tip">
+                                <h3 data-i18n="travelTips.temperature.title">Temperature</h3>
+                                <p data-i18n="travelTips.temperature.tip">Room temperature is typically 70°F (21°C) in the US</p>
+                            </div>
+                            <div class="tip">
+                                <h3 data-i18n="travelTips.distance.title">Distance</h3>
+                                <p data-i18n="travelTips.distance.tip">Speed limits are in miles per hour (mph)</p>
+                            </div>
+                            <div class="tip">
+                                <h3 data-i18n="travelTips.shopping.title">Shopping</h3>
+                                <p data-i18n="travelTips.shopping.tip">Clothes and shoes use US sizes</p>
+                            </div>
+                            <div class="tip">
+                                <h3 data-i18n="travelTips.cooking.title">Cup Measurements</h3>
+                                <p data-i18n="travelTips.cooking.tip">A US cup is about the size of a baseball! Remember: 1 cup = 8 fl oz = 237ml</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p data-i18n="footer.title">ConvertMyTrip - Your Essential Travel Companion for US Measurements</p>
+            <nav class="footer-nav">
+                <a href="#about" data-i18n="footer.about">About</a>
+                <a href="privacy.html" target="_blank" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="contact.html" data-i18n="footer.contact">Contact</a>
+            </nav>
+        </footer>
+    </div>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+    <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="7MPlFakV0lNiXM7oGYlCs";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</body>
+</html>

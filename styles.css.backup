@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --background-color: #fafafa;
+    --card-background: #ffffff;
+    --text-color: #374151;
+    --border-color: #e5e7eb;
+    --container-padding: 2rem;
+    --card-padding: 2rem;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.language-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--card-background);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.lang-btn:hover {
+    background: var(--background-color);
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.lang-btn img {
+    width: 20px;
+    height: auto;
+    border-radius: 2px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.conversion-card,
+.common-conversions,
+.travel-tips {
+    background: var(--card-background);
+    border-radius: 12px;
+    padding: var(--card-padding);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.category-selector {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.conversion-inputs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 0;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.swap-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-size: 1.2rem;
+}
+
+.swap-button:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.conversion-grid,
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.conversion-item,
+.tip {
+    background: var(--background-color);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.travel-context {
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.tip h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 1rem;
+        --card-padding: 1rem;
+    }
+
+    .language-toggle {
+        position: relative;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle,
+    .travel-context {
+        font-size: 1rem;
+    }
+
+    header {
+        margin-bottom: 2rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .messages-section {
+        display: none;
+    }
+
+    .conversion-inputs {
+        flex-direction: column;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .swap-button {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+
+    .conversion-grid,
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lang-btn img {
+        width: 16px;
+    }
+}

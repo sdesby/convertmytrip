@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - ConvertMyTrip</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .privacy-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .privacy-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-to-site {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-to-site:hover {
+            color: #1e40af;
+        }
+
+        .back-to-site img {
+            width: 125px;
+            height: 125px;
+        }
+
+        .language-toggle {
+            text-align: right;
+        }
+
+        .language-toggle button {
+            background: none;
+            border: 1px solid #2563eb;
+            color: #2563eb;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 0.5rem;
+        }
+
+        .language-toggle button.active {
+            background: #2563eb;
+            color: white;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        h1 {
+            color: #2563eb;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #1e40af;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="privacy-container">
+        <div class="privacy-header">
+            <a href="index.html" class="back-to-site">
+                <span>← Retour au site</span>
+            </a>
+            <div class="language-toggle">
+                <button onclick="toggleLanguage('fr')" class="active">Français</button>
+                <button onclick="toggleLanguage('en')">English</button>
+            </div>
+        </div>
+        <div class="privacy-content">
+            <div id="fr-content" class="content-section active">
+                <h1>MENTIONS LÉGALES</h1>
+                
+                <h2>Éditeur du site</h2>
+                <p>Le site ConvertMyTrip.com est édité par :<br>
+                Time2Genius, EI, immatriculée au RCS de Nantes sous le numéro 93938967200014, dont le siège social est situé au 5 Allée Rose Valland, 44300 Nantes.</p>
+                <p>📧 Contact : stephanie@time2genius.com</p>
+
+                <h2>Hébergeur</h2>
+                <p>Le site est hébergé par :<br>
+                Hostinger, dont le siège social est situé à Švitrigailos str. 34, Vilnius 03230 Lithuanie, joignable au +37064503378 ou via hostinger.fr.</p>
+
+                <h2>Propriété intellectuelle</h2>
+                <p>L'ensemble des contenus présents sur le site ConvertMyTrip.com (textes, images, logos, scripts, etc.) est protégé par les lois sur la propriété intellectuelle. Toute reproduction, représentation ou exploitation, totale ou partielle, de ces éléments sans l'autorisation préalable de Time2Genius est interdite.</p>
+
+                <h2>Responsabilité</h2>
+                <p>Le site ConvertMyTrip.com propose un service de conversion d'unités à titre informatif. L'éditeur ne saurait être tenu responsable d'éventuelles erreurs, inexactitudes ou omissions dans les résultats fournis, ni des conséquences de leur utilisation.</p>
+
+                <h2>Données personnelles</h2>
+                <p>Le site ConvertMyTrip.com ne collecte ni ne stocke aucune donnée personnelle. Aucune information relative aux visiteurs n'est enregistrée ou traitée.</p>
+
+                <h2>Cookies</h2>
+                <p>Le site n'utilise aucun cookie ni traceur.</p>
+
+                <h2>Droit applicable</h2>
+                <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux compétents seront ceux du ressort du siège social de Time2Genius.</p>
+            </div>
+
+            <div id="en-content" class="content-section">
+                <h1>LEGAL NOTICE</h1>
+                
+                <h2>Website Publisher</h2>
+                <p>The ConvertMyTrip.com website is published by:<br>
+                Time2Genius, EI, registered with the RCS of Nantes (FR) under number 93938967200014, with headquarters located at 5 Allée Rose Valland, 44300 Nantes.</p>
+                <p>📧 Contact: stephanie@time2genius.com</p>
+
+                <h2>Hosting Provider</h2>
+                <p>The website is hosted by:<br>
+                Hostinger, with headquarters located at Švitrigailos str. 34, Vilnius 03230 Lithuania, reachable at +37064503378 or via hostinger.fr.</p>
+
+                <h2>Intellectual Property</h2>
+                <p>All content present on ConvertMyTrip.com (texts, images, logos, scripts, etc.) is protected by intellectual property laws. Any reproduction, representation, or exploitation, in whole or in part, of these elements without prior authorization from Time2Genius is prohibited.</p>
+
+                <h2>Liability</h2>
+                <p>ConvertMyTrip.com provides a unit conversion service for informational purposes. The publisher cannot be held responsible for any errors, inaccuracies, or omissions in the results provided, nor for the consequences of their use.</p>
+
+                <h2>Personal Data</h2>
+                <p>ConvertMyTrip.com does not collect or store any personal data. No information about visitors is recorded or processed.</p>
+
+                <h2>Cookies</h2>
+                <p>The website does not use any cookies or trackers.</p>
+
+                <h2>Applicable Law</h2>
+                <p>These legal notices are governed by French law. In case of dispute, the competent courts will be those of the jurisdiction of Time2Genius's headquarters.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage(lang) {
+            // Update button states
+            document.querySelectorAll('.language-toggle button').forEach(button => {
+                button.classList.remove('active');
+            });
+            document.querySelector(`button[onclick="toggleLanguage('${lang}')"]`).classList.add('active');
+
+            // Update content visibility
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(`${lang}-content`).classList.add('active');
+
+            // Update back button text
+            const backText = lang === 'fr' ? '← Retour au site' : '← Back to website';
+            document.querySelector('.back-to-site span').textContent = backText;
+
+            // Update html lang attribute
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+</html>
